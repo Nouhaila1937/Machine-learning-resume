@@ -38,8 +38,15 @@ Si tu fais la normalisation après avoir divisé les données, attention à ne p
 ❌ Tu vas fuir l'information du test dans l'entraînement
 (Ton modèle "verra" des infos du futur, ce qui est interdit dans le ML)
 
+### La normalisation est faite uniquement sur X_train après le train_test_split().
+### 🔄 Ensuite :
+On "fit" le scaler sur X_train (c’est-à-dire qu’on calcule la moyenne et l’écart-type de X_train)
 
+Puis on "transforme" :
 
+X_train ✅ (normalisé avec ses propres stats)
+
+X_test ✅ (normalisé avec les stats de X_train, et pas ses propres stats !)
 
 
 
