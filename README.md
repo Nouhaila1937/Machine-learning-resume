@@ -21,19 +21,19 @@ du coup il faut respecter l'ordre de X_train....
 ## La normalisation 
 La normalisation (ou standardisation) est très importante dans de nombreux cas, mais elle n’est pas toujours obligatoire. Ça dépend de l’algorithme que tu utilises.
 
-🔍 Si tu fais la normalisation sans vérifier l’algo :
+## 🔍 Si tu fais la normalisation sans vérifier l’algo :
 Voici ce qui peut arriver :
-✅ Cas 1 : Tu utilises un algo qui a besoin de normalisation
+### ✅ Cas 1 : Tu utilises un algo qui a besoin de normalisation
 ➡️ Par exemple : k-NN, SVM, régression logistique, régression linéaire, etc.
 👉 Si tu normalises, c’est parfait ! Tu aides l’algorithme à mieux apprendre (convergence plus rapide, meilleure précision, etc.)
-✅ Cas 2 : Tu utilises un algo qui n’en a pas besoin
+### ✅ Cas 2 : Tu utilises un algo qui n’en a pas besoin
 ➡️ Par exemple : arbre de décision, random forest, XGBoost, etc.
-👉 Si tu normalises :
+### 👉 Si tu normalises :
 Ce n’est pas grave,
 Mais ça ne sert à rien (ça ne change ni les performances ni la logique),
 Parfois, ça peut ajouter de la complexité inutile ou ralentir un peu l’entraînement.
 Donc pas dangereux, mais pas utile non plus.
-⚠️ Cas à éviter :
+### ⚠️ Cas à éviter :
 Si tu fais la normalisation après avoir divisé les données, attention à ne pas normaliser sur tout le jeu de données, sinon :
 ❌ Tu vas fuir l'information du test dans l'entraînement
 (Ton modèle "verra" des infos du futur, ce qui est interdit dans le ML)
