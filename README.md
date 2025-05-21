@@ -17,7 +17,7 @@ y_train = résultat[2]
 y_test = résultat[3]
 ```
 du coup il faut respecter l'ordre de X_train....
-
+le test_size=0.2 veut dire qu'on garde 20% des données pour faire le test et le 80% restantes pour l'entrainement 
 ## La normalisation 
 La normalisation (ou standardisation) est très importante dans de nombreux cas, mais elle n’est pas toujours obligatoire. Ça dépend de l’algorithme que tu utilises.
 
