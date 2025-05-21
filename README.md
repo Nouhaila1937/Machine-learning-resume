@@ -57,10 +57,47 @@ X_test ✅ (normalisé avec les stats de X_train, et pas ses propres stats !)
 ici l'accuracy soit de calculer le R² il est dans la régréssion linéaire 
 soit il s'appelle l'accuraccy dans la classification
 ## Régression linéaire simple:
-
-
+f(x)=ax1+b
 
 ## Régression linéaire multiple:
 ```
 f(x)=ax1+bx2+c
 ```
+
+## Régression logistic non linéaire
+
+on utilise une fonction qui va nous permettre de transformer les données non linéairement séparables en un espace de caractéristiques où elles peuvent devenir linéairement séparables . Cela permet à des modèles linéaires, comme la régression logistique, de capturer des frontières de décision non linéaires.
+
+## 📊 Visualisation des données
+Avant d'appliquer la fonction mapFeature, il est essentiel de visualiser les données pour comprendre leur structure. Si les données sont clairement non linéaires, comme dans le cas de deux classes disposées en cercles concentriques, une frontière linéaire ne suffira pas. C'est dans ce contexte que l'ajout de termes polynomiaux devient pertinent.
+
+
+```bash
+def mapFeature(X1, X2, degree):
+    #res = np.ones(X1.shape[0])
+    res = np.zeros((X1.shape[0], 0))
+    for i in range(1,degree + 1):
+        for j in range(0,i + 1):
+            res = np.column_stack((res, (X1 ** (i-j)) * (X2 ** j)))
+    return res
+
+
+```
+on peut utiliser d'autre méthode :
+![image](https://github.com/user-attachments/assets/010f7ca6-e62f-4689-81d7-dc692cf72347)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
