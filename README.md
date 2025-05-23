@@ -48,7 +48,7 @@ X_train ✅ (normalisé avec ses propres stats)
 
 X_test ✅ (normalisé avec les stats de X_train, et pas ses propres stats !)
 
-
+en normalisant les données de test (X_test) en utilisant la moyenne et l'écart-type calculés uniquement sur les données d'entraînement (X_train), on simule une situation où le modèle rencontre des données totalement nouvelles, sans aucune connaissance préalable de leur distribution.
 
 
 
